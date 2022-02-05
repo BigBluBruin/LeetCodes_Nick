@@ -26,22 +26,7 @@ int main()
         nums.erase(nums.begin());
         if(ii>0 and aa==pr) continue;
         pr = aa;
-
-        // for (auto aa : nums)
-        // {
-        //     std::cout << aa << " ";
-        // }
-        // std::cout << "|" << endl;
         temp = two_sum(nums,-aa);
-
-
-        // if (temp.size()>0 )
-        // {
-        //     if ( output.size()>0 and temp[0][0] == output[output.size() - 1][0] and temp[0][2] == output[output.size() - 1][2] )
-        //     {
-        //         temp.erase(temp.begin());
-        //     }
-        // }
         output.insert(output.end(),temp.begin(),temp.end());
     }
 
@@ -63,8 +48,6 @@ vector<std::vector<int>> two_sum(vector<int> input, int target)
     std::vector<std::vector<int>> result;
     int left_pointer=0, right_pointer=(int)input.size()-1;
     do{
-       
-       //std::cout<<left_pointer<<" "<<right_pointer<<std::endl;
         if(input[left_pointer]+input[right_pointer]>target)
         {
             right_pointer--;
@@ -89,16 +72,5 @@ vector<std::vector<int>> two_sum(vector<int> input, int target)
             
         }
     }while(left_pointer<right_pointer);
-
- 
-    // for (auto ii1 : result)
-    // {
-    //     for (auto ii2 : ii1)
-    //     {
-    //         std::cout << ii2 << " ";
-    //     }
-    //     std::cout << std::endl;
-    // }
-
     return result;
 }
