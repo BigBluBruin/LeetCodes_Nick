@@ -14,9 +14,3 @@
 using namespace std;
 
 
-
-template 
-void display(std::vector<T> input)
-{
-    
-}
